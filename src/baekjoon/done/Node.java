@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.done;
 
 class Node implements Comparable<Node> {
     int index;
