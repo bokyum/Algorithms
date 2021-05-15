@@ -5,27 +5,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-class Node {
+class YX {
     int y;
     int x;
 
-    public Node(int y, int x) {
+    public YX(int y, int x) {
         this.y = y;
         this.x = x;
     }
 }
+
 public class B1012 {
     static int[][] arr;
     static int[][] direct = {{0, -1}, {0, 1}, {1, 0}, {-1, 0}};
     static int N, M, K;
     static int bfs(int y, int x) {
-        Queue<Node> q = new LinkedList<>();
+        Queue<YX> q = new LinkedList<>();
         if(arr[y][x] == 0)
             return 0;
-        q.add(new Node(y, x));
+        q.add(new YX(y, x));
 
         while(!q.isEmpty()) {
-            Node n = q.poll();
+            YX n = q.poll();
             int tempY = n.y;
             int tempX = n.x;
             for(int i=0; i < 4; i++) {
@@ -34,7 +35,7 @@ public class B1012 {
                 if(dy < N && dy >= 0 && dx < M && dx >=0){
                     if(arr[dy][dx] == 1) {
                         arr[dy][dx] = 0;
-                        q.add(new Node(dy, dx));
+                        q.add(new YX(dy, dx));
                     }
                 }
             }

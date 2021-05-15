@@ -30,53 +30,7 @@
     * 높은 우선순위를 가진 요소를 먼저 꺼내서 처리하는 자료구조
     * 내부 요소는 힙으로 구성되어 이진트리 구조로 이루어져 있음
     * 내부구조가 힙으로 구성되어 있기 때문에 시간 복잡도는 O(NlogN)
-```aidl
-import java.util.PriorityQueue;
-
-//int형 priorityQueue 선언 (우선순위가 낮은 숫자 순)
-PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
-
-//int형 priorityQueue 선언 (우선순위가 높은 숫자 순)
-PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
-
-priorityQueue.add(1);     // priorityQueue 값 1 추가
-priorityQueue.add(2);     // priorityQueue 값 2 추가
-priorityQueue.offer(3);   // priorityQueue 값 3 추가
-
-priorityQueue.poll();       // priorityQueue에 첫번째 값을 반환하고 제거 비어있다면 null
-priorityQueue.remove();     // priorityQueue에 첫번째 값 제거
-priorityQueue.clear();      // priorityQueue에 초기화
-
-class Node implements Comparable<Node> {
-
-    private int index;
-    private int distance;
-
-    public Node(int index, int distance) {
-        this.index = index;
-        this.distance = distance;
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    public int getDistance() {
-        return this.distance;
-    }
-
-    // 거리(비용)가 짧은 것이 높은 우선순위를 가지도록 설정
-    @Override
-    public int compareTo(Node other) {
-        if (this.distance < other.distance) {
-            return -1;
-        }
-        return 1;
-    }
-}
-
-PriorityQueue<Node> pq = new PriorityQueue<>();
-```    
+  
     
 ## 플로이드 워셜 알고리즘
 * 모든 지점에서 다른 모든 지점까지의 최단 경로를 모두 구해야 하는 경우에 사용
