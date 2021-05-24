@@ -45,7 +45,7 @@
 for (int k = 1; k <= n; k++) {
     for (int a = 1; a <= n; a++) {
         for (int b = 1; b <= n; b++) {
-            dongbinbook.graph[a][b] = Math.min(dongbinbook.graph[a][b], dongbinbook.graph[a][k] + dongbinbook.graph[k][b]);
+            graph[a][b] = Math.min(graph[a][b], graph[a][k] + graph[k][b]);
         }
     }
 }
