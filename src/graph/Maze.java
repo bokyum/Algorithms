@@ -1,13 +1,13 @@
-package bfs_dfs;
+package graph;
 
 import java.io.IOException;
 import java.util.*;
 
-class Node {
+class Node3 {
     private int x;
     private int y;
 
-    public Node(int y, int x) {
+    public Node3(int y, int x) {
         this.y = y;
         this.x = x;
     }
@@ -32,16 +32,16 @@ public class Maze {
     };
 
     static int solve(int y, int x) {
-        Queue<Node> queue = new LinkedList<>();
-        queue.offer(new Node(y, x));
+        Queue<Node3> queue = new LinkedList<>();
+        queue.offer(new Node3(y, x));
         while(!queue.isEmpty()) {
-            Node temp = queue.poll();
+            Node3 temp = queue.poll();
             y = temp.getY(); x = temp.getX();
             for(int directIndex=0; directIndex < 4; ++directIndex){
                 int diY = y + direct[directIndex][0];
                 int diX = x + direct[directIndex][1];
                 if(0 <= diY && diY < N && 0 <= diX && diX < M && mazeArr[diY][diX] == 1){
-                    queue.add(new Node(diY, diX));
+                    queue.add(new Node3(diY, diX));
                     mazeArr[diY][diX] = mazeArr[y][x] + 1;
                 }
             }
