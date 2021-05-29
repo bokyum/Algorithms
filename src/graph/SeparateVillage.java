@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-class Node implements Comparable<Node>{
+class Node5 implements Comparable<Node5>{
     private int A;
     private int B;
     private int C;
 
-    public Node(int a,int b, int c) {
+    public Node5(int a,int b, int c) {
         A = a;
         B = b;
         C = c;
@@ -40,7 +40,7 @@ class Node implements Comparable<Node>{
     }
 
     @Override
-    public int compareTo(Node o) {
+    public int compareTo(Node5 o) {
         if(this.C < o.getC()) {
             return -1;
         }
@@ -52,7 +52,7 @@ public class SeparateVillage {
     static int N, M;
     public static int result = 0;
     public static int[] parent = new int[100001];
-    public static ArrayList<Node> graph = new ArrayList<Node>();
+    public static ArrayList<Node5> graph = new ArrayList<>();
 
     // 특정 원소가 속한 집합을 찾기
     public static int findParent(int x) {
@@ -84,7 +84,7 @@ public class SeparateVillage {
             int A = sc.nextInt();
             int B = sc.nextInt();
             int C = sc.nextInt();
-            graph.add(new Node(A, B, C));
+            graph.add(new Node5(A, B, C));
         }
 
         Collections.sort(graph);
