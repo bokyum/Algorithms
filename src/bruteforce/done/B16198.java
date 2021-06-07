@@ -1,4 +1,4 @@
-package bruteforce;
+package bruteforce.done;
 
 import java.util.ArrayList;
 import java.util.Scanner;
