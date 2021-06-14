@@ -1,4 +1,4 @@
-package bruteforce;
+package bruteforce.done;
 
 import java.io.BufferedReader;
 import java.io.IOException;
