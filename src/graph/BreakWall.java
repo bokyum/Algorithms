@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class B2206 {
+public class BreakWall {
     static int N, M;
     static int[] dy = {-1, 1, 0, 0};
     static int[] dx = {0, 0, 1, -1};
