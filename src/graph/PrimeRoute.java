@@ -2,7 +2,7 @@ package graph;
 
 import java.io.*;
 import java.util.*;
-public class B1963 {
+public class PrimeRoute {
     static ArrayList<Integer> prime;
 
     public static void main(String[] args) throws IOException {
