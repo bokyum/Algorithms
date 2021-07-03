@@ -1,4 +1,4 @@
-package dynamicprogramming;
+package dynamicprogramming.done;
 
 import java.io.*;
 import java.util.*;
